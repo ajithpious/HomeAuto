@@ -1,1 +1,1 @@
-web: gunicorn homeautoiot.wsgi
+web: gunicorn Homeauto.wsgi
