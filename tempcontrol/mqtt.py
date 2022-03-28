@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 import paho.mqtt.client as mqtt
 
 token="BBFF-Bfw8lO95m9pzKw8zE0Zupzw5OrKDQ0"
