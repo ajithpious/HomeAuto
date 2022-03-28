@@ -26,7 +26,7 @@ SECRET_KEY = '4w&_%i6640byz_wy)i))q0rigec@l-885@0n3+90ld9y&!c%yx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://homeautoiot.herokuapp.com','127.0.0.1']
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 TEMP_DIR=os.path.join(BASE_DIR,"templates")
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
