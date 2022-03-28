@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Automation</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="{% static '/fontawesome/css/all.min.css' %}">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-ocean-vibes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mycss.css' %}">
+
+    <script src="https://kit.fontawesome.com/9467de24c1.js" crossorigin="anonymous"></script>
+    <!--
+    
+TemplateMo 554 Ocean Vibes
+
+https://templatemo.com/tm-554-ocean-vibes
+
+-->
+</head>
+
+<body>
+    <div id="loader" class="lds-dual-ring hidden overlay"></div>
+    <header class="tm-site-header">
+        <h1 class="tm-mt-0 tm-mb-15"><span class="tm-color-primary">Home</span> <span class="tm-color-gray-2">Automation</span></h1>
+        <em class="tm-tagline tm-color-light-gray">simple and effective design</em>
+    </header>
+
+    <!-- Video banner 400 px height -->
+    <div id="tm-video-container">
+
+
+        <video autoplay muted loop id="tm-video">
+            <source src="{% static 'video/video.mp4' %}" type="video/mp4">
+        </video>
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+    </div>
+    <div class="tm-container">
+        <nav class="tm-main-nav">
+            <ul id="inline-popups">
+
+                <li class="tm-nav-item">
+                    <a href="#AC" class="tm-nav-link" onclick='update()'> 
+                        Air Condition
+                        <i class="fas fa-3x fa-temperature-high"></i>
+                    </a>
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#contact" data-effect="mfp-move-from-top" class="tm-nav-link" id="tm-gallery-link">
+                        Lights
+                        <i class="fas fa-3x fa-lightbulb"></i>
+                    </a>
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#contact" data-effect="mfp-move-from-top" class="tm-nav-link" onclick="update()">
+                        Gates
+                        <i class="fas fa-3x fa-door-open"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Popup itself -->
+
+        <div id="AC" class="popup mfp-with-anim mfp-hide tm-bg-gray hidden">
+            <a href="#" class="tm-close-popup">
+                return home
+                <i class="fas fa-times"></i>
+            </a>
+            <h2 class="tm-contact-col tm-color-primary tm-page-title tm-mb-40">Air Condition</h2>
+            <div class="tm-row tm-contact-row">
+                <div class="tm-col tm-contact-col">
+                    <table id="datatable" style="border-collapse: collapse; border: none;">
+                        <tr>
+                            <th> <strong>Room</strong></th>
+                            <th style="border: none; padding-left: 50px;"> <strong>Status</strong></th>
+                            <th style="border: none; padding-left: 50px;"> <strong>Temparature</strong></th>
+
+                        </tr>
+                        <tr style="border: none;">
+                            <td style="border: none;vertical-align: middle;">
+                                <p>
+                                    <strong>Bed Room 1</strong>
+                                </p>
+                            </td>
+                            <td style="border: none; padding-left: 50px;vertical-align: top;">
+
+                                <label class="switch">
+                                        <input id="chk1" type="checkbox" onclick="command()">
+                                        <span class="slider round"></span>
+                                </label>
+
+                            </td>
+                            <td style="border: none; padding-left: 50px;vertical-align: middle;">
+                                <p id="temp">
+                                    <strong></strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="border: none;">
+                            <td style="border: none;vertical-align: middle;">
+                                <p>
+                                    <strong>Bed Room 2</strong>
+                                </p>
+                            </td>
+                            <td style="border: none; padding-left: 50px;vertical-align: top;">
+
+                                <label class="switch">
+                                        <input id="chk2" type="checkbox">
+                                        <span class="slider round"></span>
+                                </label>
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="tm-footer">
+        <span>HomeAutomation</span>
+    </footer>
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/templatemo-script.js' %}"></script>
+    <script src="{% static 'js/myjs.js' %}"></script>
+
+</body>
+
+</html>
