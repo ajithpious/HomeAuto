@@ -1,1 +1,1 @@
-web: gunicorn mlview.wsgi
+web: gunicorn homeautoiot.wsgi
